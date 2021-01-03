@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{62600585-ff20-42c5-b9d1-3e2564f5a72f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{ad5153e0-35c7-4377-b3b9-9cefd621e3ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{0edf12d7-acbb-4a5f-a333-b7ed5a940024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{a20ef2ba-e4da-4b80-b5a7-6e00e59659aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ButtonFabric">
+      <UniqueIdentifier>{0addd98d-c8f2-46e0-985a-ca99c22b6432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level">
+      <UniqueIdentifier>{6036b0fc-8c35-445a-a886-7881dcae1280}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="mainMenuScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="pictureObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="textObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="event.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="buttonFabric.h">
+      <Filter>ButtonFabric</Filter>
+    </ClInclude>
+    <ClInclude Include="levelEditor.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="level.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="movable.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="damagable.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="wall.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="levelDrawer.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="floorDrawer.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
