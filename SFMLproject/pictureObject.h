@@ -5,8 +5,9 @@
 
 struct PictureObject final: Object
 {
+	std::string textureName;
 public:
-	PictureObject(std::string &name)
+	PictureObject(std::string &name):textureName(name)
 	{
 		texture.loadFromFile(name);
 		refreshSprite();
@@ -37,10 +38,10 @@ public:
 		return onMouseOver(point);
 	}
 
-	bool ifOnMouseOver(Vector2 point) override
+	bool ifOnMouseOver(Vector2 point) const override
 	{
-		return (point.x > sprite.getPosition().x) && (point.x < (sprite.getPosition().x + sprite.getTextureRect().width)) &&
-			(point.y > sprite.getPosition().y) && (point.y < (sprite.getPosition().y + sprite.getTextureRect().height));
+		return (point.x > sprite.getPosition().x) && (point.x < (sprite.getPosition().x + sprite.getGlobalBounds().width)) &&
+			(point.y > sprite.getPosition().y) && (point.y < (sprite.getPosition().y + sprite.getGlobalBounds().height));
 	}
 
 	void ChangeColour(sf::Color color) override

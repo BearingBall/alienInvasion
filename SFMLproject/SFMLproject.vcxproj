@@ -143,11 +143,13 @@
   <ItemGroup>
     <ClInclude Include="buttonFabric.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="classSaver.h" />
     <ClInclude Include="damagable.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="floorDrawer.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="level.h" />
     <ClInclude Include="levelDrawer.h" />
     <ClInclude Include="levelEditor.h" />

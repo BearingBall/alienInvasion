@@ -8,8 +8,6 @@
 class Level final
 {
 	
-	const float floatLimit = 0.0001;
-
 	void norming(float& value) const 
 	{
 		if ((value / wallSize) - static_cast<int>(value / wallSize) > floatLimit)
@@ -18,6 +16,7 @@ class Level final
 		}
 	}
 public:
+	const float floatLimit = 0.0001;
 	float wallSize = 100;
 	Vector2 levelSize;
 	Level(std::string groundName, Vector2 _levelSize = { 2000,2000 }):levelSize(_levelSize),floor(groundName)
@@ -34,13 +33,13 @@ public:
 	std::vector<Wall> walls;
 	std::vector<Enemy> enemies;
 	
-	void addWall(std::string& wallName, Vector2 place, Vector2 shift)
+	void addWall(std::string& wallName, Vector2 place, Vector2 shift, wallType type)
 	{
 		place.x += shift.x;
 		place.y += shift.y;
 		norming(place.x);
 		norming(place.y);
-		Wall wall(wallName, place, wallSize);
+		Wall wall(wallName, place, type, wallSize);
 		if ((place.x >= 0 && place.y >= 0) && (place.x < levelSize.x && place.y < levelSize.y)&&(std::find(walls.begin(), walls.end(), wall) == walls.end()))
 		{
 			walls.push_back(wall);

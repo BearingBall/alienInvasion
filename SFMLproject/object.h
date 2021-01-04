@@ -24,7 +24,7 @@ public:
 	};
 
 	virtual bool ifOnMousePressed(Vector2 point) = NULL;
-	virtual bool ifOnMouseOver(Vector2 point) = NULL;
+	virtual bool ifOnMouseOver(Vector2 point) const = NULL;
 	
 	bool onMousePressed(Vector2 point)
 	{

@@ -2,23 +2,32 @@
 #include "movable.h"
 #include "pictureObject.h"
 
+enum wallType
+{
+	wall,
+	spawnPoint,
+	doorIn,
+	doorOut
+};
+
 class Wall final: public Movable
 {
 private:
-	std::string wallName = "../ResourceFile/wall.png";
-	PictureObject model;
-	float size;
 public:
-	Wall(std::string& _wallName, Vector2 coord, float _size = 100):Movable(coord),model(wallName),size(_size),wallName(_wallName)
+	float size;
+	std::string wallName;
+	wallType type;
+	PictureObject model;
+	Wall(std::string _wallName, Vector2 coord, wallType _type, float _size = 100):Movable(coord),model(wallName),size(_size),wallName(_wallName),type(_type)
 	{
 		
 	}
 	
 	void draw(sf::RenderWindow& window, Vector2 shift, Vector2 levelSize)
 	{
-		model.refreshSprite(sf::IntRect(0, 0, size, size));
+		model.refreshSprite(sf::IntRect(0, 0, model.texture.getSize().x, model.texture.getSize().y));
 		model.setPosition({ (coordinate.x + shift.x) , (coordinate.y + shift.y) });
-		//model.sprite.setScale(sf::Vector2f(size / model.texture.getSize().x, size / model.texture.getSize().y));
+		model.sprite.setScale(sf::Vector2f(size / model.texture.getSize().x, size / model.texture.getSize().y));
 		model.draw(window);
 	}
 

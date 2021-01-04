@@ -15,9 +15,6 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{ad5153e0-35c7-4377-b3b9-9cefd621e3ef}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Objects">
-      <UniqueIdentifier>{0edf12d7-acbb-4a5f-a333-b7ed5a940024}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Math">
       <UniqueIdentifier>{a20ef2ba-e4da-4b80-b5a7-6e00e59659aa}</UniqueIdentifier>
     </Filter>
@@ -31,6 +28,24 @@
     <Filter Include="Level">
       <UniqueIdentifier>{6036b0fc-8c35-445a-a886-7881dcae1280}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{347a5138-c4ea-4961-8399-37a86d30bfbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Types">
+      <UniqueIdentifier>{0edf12d7-acbb-4a5f-a333-b7ed5a940024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Types">
+      <UniqueIdentifier>{38120e17-5a11-4755-8a3e-819545d814db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event">
+      <UniqueIdentifier>{a1ea7858-55fb-4adc-9dbb-39ff31fe2d11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{e8624346-ba82-4c78-b857-a56e1a8d1848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Saver">
+      <UniqueIdentifier>{fb7d74e2-5fea-4f44-876d-483ce2bf2db1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,35 +56,17 @@
     <ClInclude Include="engine.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="scene.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="mainMenuScene.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="object.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="pictureObject.h">
-      <Filter>Objects</Filter>
+      <Filter>Object\Types</Filter>
     </ClInclude>
     <ClInclude Include="textObject.h">
-      <Filter>Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="event.h">
-      <Filter>Engine</Filter>
+      <Filter>Object\Types</Filter>
     </ClInclude>
     <ClInclude Include="vector2.h">
       <Filter>Math</Filter>
     </ClInclude>
     <ClInclude Include="buttonFabric.h">
       <Filter>ButtonFabric</Filter>
-    </ClInclude>
-    <ClInclude Include="levelEditor.h">
-      <Filter>Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="camera.h">
-      <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="level.h">
       <Filter>Level</Filter>
@@ -91,6 +88,30 @@
     </ClInclude>
     <ClInclude Include="floorDrawer.h">
       <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="mainMenuScene.h">
+      <Filter>Scenes\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="levelEditor.h">
+      <Filter>Scenes\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="event.h">
+      <Filter>Event</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Saver</Filter>
+    </ClInclude>
+    <ClInclude Include="classSaver.h">
+      <Filter>Saver</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

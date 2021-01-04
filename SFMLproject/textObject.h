@@ -27,7 +27,7 @@ public:
 		return onMouseOver(point);
 	}
 
-	bool ifOnMouseOver(Vector2 point) override
+	bool ifOnMouseOver(Vector2 point) const override
 	{
 		return (point.x > text.getGlobalBounds().left) && (point.x < (text.getGlobalBounds().left + text.getGlobalBounds().width)) &&
 			(point.y > text.getGlobalBounds().top) && (point.y < (text.getGlobalBounds().top + text.getGlobalBounds().height));
