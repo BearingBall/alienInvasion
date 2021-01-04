@@ -4,5 +4,5 @@
 
 class Enemy final: Movable,Damagable
 {
-	
+	//maybe later...
 };

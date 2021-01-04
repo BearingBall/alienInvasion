@@ -11,12 +11,10 @@ class LevelDrawer final
 public:
 	static void draw(sf::RenderWindow& window, Level& level, Camera& camera)
 	{
-		FloorDrawer::draw(window, level.floor, { -1 * (camera.coordinate.x),-1 * (camera.coordinate.y) }, level.levelSize, level.wallSize);
-		std::for_each(level.walls.begin(), level.walls.end(), [&window,&camera,&level](Wall& tmp)
-		{
-			tmp.draw(window,{-1*(camera.coordinate.x),-1*(camera.coordinate.y)},level.levelSize);
-			//std::cout << tmp.coordinate.x << " " << tmp.coordinate.y << "\n";
+		FloorDrawer::draw(window, level.getFloor(), camera.getCoordinate()*(-1));
+		std::for_each(level.getWalls().begin(), level.getWalls().end(), 
+			[&window,&camera,&level](Wall& tmp){
+			tmp.draw(window,camera.getCoordinate()*(-1), level.getLevelSize());
 		});
-		//std::cout << "\n";
 	}
 };

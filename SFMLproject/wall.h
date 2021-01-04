@@ -26,14 +26,14 @@ public:
 	void draw(sf::RenderWindow& window, Vector2 shift, Vector2 levelSize)
 	{
 		model.refreshSprite(sf::IntRect(0, 0, model.texture.getSize().x, model.texture.getSize().y));
-		model.setPosition({ (coordinate.x + shift.x) , (coordinate.y + shift.y) });
+		model.setPosition(coordinate+shift);
 		model.sprite.setScale(sf::Vector2f(size / model.texture.getSize().x, size / model.texture.getSize().y));
 		model.draw(window);
 	}
 
 	bool operator==(const Wall& other) const
 	{
-		return (coordinate.x == other.coordinate.x) && (coordinate.y == other.coordinate.y);
+		return coordinate == other.getCoordinate();
 	}
 	
 };

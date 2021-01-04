@@ -21,20 +21,19 @@ public:
 	static void save(size_t numberLevel, Level& level)
 	{
 		nlohmann::json saveFile;
-		saveFile["floatLimit"] = level.floatLimit;
-		saveFile["wallSize"] = level.wallSize;
-		saveFile["levelSize.x"] = level.levelSize.x;
-		saveFile["levelSize.y"] = level.levelSize.y;
-		saveFile["level.floor.textureName"] = level.floor.textureName;
-		saveFile["level.walls.size"] = level.walls.size();
-		for (size_t i = 0; i < level.walls.size(); ++i)
+		saveFile["wallSize"] = level.getWallSize();
+		saveFile["levelSize.x"] = level.getLevelSize().x;
+		saveFile["levelSize.y"] = level.getLevelSize().y;
+		saveFile["level.floor.textureName"] = level.getFloor().textureName;
+		saveFile["level.walls.size"] = level.getWalls().size();
+		for (size_t i = 0; i < level.getWalls().size(); ++i)
 		{
-			saveFile[std::string("level.walls[") + std::to_string(i) + "].wallName"] = level.walls[i].wallName;
-			saveFile[std::string("level.walls[") + std::to_string(i) + "].size"] = level.walls[i].size;
-			saveFile[std::string("level.walls[") + std::to_string(i) + "].type"] = level.walls[i].type;
-			saveFile[std::string("level.walls[") + std::to_string(i) + "].coordinate.x"] = level.walls[i].coordinate.x;
-			saveFile[std::string("level.walls[") + std::to_string(i) + "].coordinate.y"] = level.walls[i].coordinate.y;
-			saveFile[std::string("level.walls[") + std::to_string(i) + "].speed"] = level.walls[i].speed;
+			saveFile[std::string("level.walls[") + std::to_string(i) + "].wallName"] = level.getWalls()[i].wallName;
+			saveFile[std::string("level.walls[") + std::to_string(i) + "].size"] = level.getWalls()[i].size;
+			saveFile[std::string("level.walls[") + std::to_string(i) + "].type"] = level.getWalls()[i].type;
+			saveFile[std::string("level.walls[") + std::to_string(i) + "].coordinate.x"] = level.getWalls()[i].getCoordinate().x;
+			saveFile[std::string("level.walls[") + std::to_string(i) + "].coordinate.y"] = level.getWalls()[i].getCoordinate().y;
+			saveFile[std::string("level.walls[") + std::to_string(i) + "].speed"] = level.getWalls()[i].getSpeed();
 		}
 		std::ofstream stream(std::string("../ResourceFile/Levels/Level_") + std::to_string(numberLevel) + ".json");
 		stream << std::setw(4) << saveFile << std::endl;
@@ -45,10 +44,10 @@ public:
 		nlohmann::json saveFile;
 		std::ifstream stream(std::string("../ResourceFile/Levels/Level_") + std::to_string(numberLevel) + ".json");
 		stream >> saveFile;
-		level.wallSize = saveFile["wallSize"];
-		level.levelSize.x = saveFile["levelSize.x"];
-		level.levelSize.y = saveFile["levelSize.y"];
-		level.floor.textureName = saveFile["level.floor.textureName"];
+		level.getWallSize() = saveFile["wallSize"];
+		level.getLevelSize().x = saveFile["levelSize.x"];
+		level.getLevelSize().y = saveFile["levelSize.y"];
+		level.getFloor().textureName = saveFile["level.floor.textureName"];
 		for (size_t i = 0; i < saveFile["level.walls.size"]; ++i)
 		{
 			Wall wall(saveFile[std::string("level.walls[") + std::to_string(i) + "].wallName"],
@@ -56,7 +55,7 @@ public:
 				saveFile[std::string("level.walls[") + std::to_string(i) + "].coordinate.y"] }, 
 				saveFile[std::string("level.walls[") + std::to_string(i) + "].type"], 
 				saveFile[std::string("level.walls[") + std::to_string(i) + "].size"]);
-			level.walls.push_back(wall);
+			level.getWalls().push_back(wall);
 		}
 		
 	}

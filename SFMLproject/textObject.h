@@ -3,6 +3,8 @@
 
 struct TextObject final : Object
 {
+private:
+	sf::Text text;
 public:
 	TextObject(sf::Font& font, std::string phrase, size_t size):text(phrase, font, size)
 	{
@@ -37,6 +39,14 @@ public:
 	{
 		text.setFillColor(color);
 	}
-	
-	sf::Text text;
+
+	const sf::Text& getText() const
+	{
+		return text;
+	}
+
+	sf::Text& getText()
+	{
+		return text;
+	}
 };

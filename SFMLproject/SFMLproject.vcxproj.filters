@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Engine">
       <UniqueIdentifier>{62600585-ff20-42c5-b9d1-3e2564f5a72f}</UniqueIdentifier>
     </Filter>
@@ -45,6 +37,15 @@
     </Filter>
     <Filter Include="Saver">
       <UniqueIdentifier>{fb7d74e2-5fea-4f44-876d-483ce2bf2db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StartAnimation">
+      <UniqueIdentifier>{4e45ad49-a48c-44c7-81a8-98dc75f2b6b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ResourceFilesContainer">
+      <UniqueIdentifier>{81e7bbb7-00ff-4a2e-a05b-6c400c5a6a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{d462aa4c-c56e-4342-8ded-966f0897f4c4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +113,18 @@
     </ClInclude>
     <ClInclude Include="classSaver.h">
       <Filter>Saver</Filter>
+    </ClInclude>
+    <ClInclude Include="animationBearingBall.h">
+      <Filter>StartAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceFileNaming.h">
+      <Filter>ResourceFilesContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameExceptions.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="gameScene.h">
+      <Filter>Scenes\Types</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

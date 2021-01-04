@@ -1,5 +1,4 @@
 {
-    "floatLimit": 9.999999747378752e-05,
     "level.floor.textureName": "../ResourceFile/ground.png",
     "level.walls.size": 0,
     "levelSize.x": 2000.0,

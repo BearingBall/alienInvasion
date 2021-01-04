@@ -10,6 +10,12 @@ enum Event
 
 class EventOperator final
 {
+private:
+	std::deque<Event> events;
+	std::shared_ptr<Scene> sceneToSwap;
+	
+	EventOperator() = default;
+	~EventOperator() = default;
 public:
 	static EventOperator* instance()
 	{
@@ -34,11 +40,13 @@ public:
 		return tmp;
 	}
 
-	std::shared_ptr<Scene> sceneToSwap;
+	void putSceneToSwap(std::shared_ptr<Scene> scene)
+	{
+		sceneToSwap = scene;
+	}
 	
-private:
-	std::deque<Event> events;
-
-	EventOperator() = default;
-	~EventOperator() = default;
+	const std::shared_ptr<Scene>& getSceneToSwap() const
+	{
+		return sceneToSwap;
+	}
 };

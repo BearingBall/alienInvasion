@@ -4,10 +4,12 @@
 
 class FloorDrawer
 {
+private:
+	inline static const Vector2 startFloorPosition = { 0,0 };
 public:
-	static void draw(sf::RenderWindow& window, PictureObject& floor, Vector2 shift, Vector2 levelSize, size_t size)
+	static void draw(sf::RenderWindow& window, PictureObject& floor, Vector2 shift)
 	{
-			floor.setPosition({ (0 + shift.x) , (0 + shift.y) });
-			floor.draw(window);
+		floor.setPosition(startFloorPosition+shift);
+		floor.draw(window);
 	}
 };

@@ -2,8 +2,13 @@
 
 class Damagable
 {
+
+private:
+	size_t maxHealth;
+	size_t health = maxHealth;
+	
 public:
-	Damagable() = default;
+	Damagable(size_t _maxHealth = 100):maxHealth(_maxHealth) {}
 	virtual ~Damagable() = default;
 
 	void healthSet(size_t _health)
@@ -40,8 +45,4 @@ public:
 	{
 		return health != 0;
 	}
-	
-private:
-	size_t health = 100;
-	size_t maxHealth = 100;
 };

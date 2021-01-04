@@ -6,13 +6,15 @@
 struct PictureObject final: Object
 {
 	std::string textureName;
+	sf::Texture texture;
+	sf::Sprite sprite;
 public:
-	PictureObject(std::string &name):textureName(name)
+	PictureObject(const std::string& name):textureName(name)
 	{
 		texture.loadFromFile(name);
 		refreshSprite();
 	}
-
+	
 	void refreshSprite()
 	{
 		sprite = sf::Sprite(texture);
@@ -48,7 +50,24 @@ public:
 	{
 		sprite.setColor(color);
 	}
-	
-	sf::Texture texture;
-	sf::Sprite sprite;
+
+	const sf::Texture& getTexture() const
+	{
+		return texture;
+	}
+
+	sf::Texture& getTexture()
+	{
+		return texture;
+	}
+
+	const sf::Sprite& getSprite() const
+	{
+		return sprite;
+	}
+
+	sf::Sprite& getSprite()
+	{
+		return sprite;
+	}
 };

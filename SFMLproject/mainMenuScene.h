@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <SFML/Graphics.hpp>
-
+#include <memory>
 
 
 #include "buttonFabric.h"
@@ -11,70 +11,30 @@
 #include "pictureObject.h"
 #include "scene.h"
 #include "textObject.h"
+#include "resourceFileNaming.h"
 
 class MainMenu final : public Scene
 {
 private:
-	std::string backgroundName = "../ResourceFile/background.png";
-	std::string fontName = "../ResourceFile/Konstanting.ttf";
 	sf::Font font;
 	std::function<void(sf::RenderWindow&)> setCurrentMenuMorph;
-
 	
 	void initializeBackground(sf::RenderWindow &window)
 	{
-		PictureObject* background = new PictureObject(backgroundName);
+		PictureObject* background = new PictureObject(ResourceFileNaming::backgroundName);
 		background->texture.setSmooth(true);
 		background->texture.setRepeated(true);
 		background->refreshSprite(sf::IntRect(0, 0, window.getSize().x, window.getSize().x));
+		background->getSprite().setScale(5, 5);
 		objects.push_back(std::shared_ptr<PictureObject>(background));
 	}
 
 	void initializeFont()
 	{
-		font.loadFromFile(fontName);
+		font.loadFromFile(ResourceFileNaming::fontName);
 	}
 
-	void createMenuMorph1(sf::RenderWindow &window)
-	{
-		std::function<void(Object&)> nothing([](Object& object) {});
-		std::function<void(Object&)> ChangeColor([](Object& object) {object.ChangeColour(sf::Color::Red); });
-		std::function<void(Object&)> Exit([&window](Object& object) { EventOperator::instance()->push(Event::eventExit);});
-
-		std::function<void(Object&)> setMorph2([this](Object& object)
-		{
-			setCurrentMenuMorph = 
-				std::function<void(sf::RenderWindow&)>([this](sf::RenderWindow& window) {createMenuMorph2(window); });
-		});
-
-		std::function<void(Object&)> setMorph3([this](Object& object)
-		{
-			setCurrentMenuMorph =
-				std::function<void(sf::RenderWindow&)>([this](sf::RenderWindow& window) {createMenuMorph3(window); });
-		});
-		
-		ButtonFabric fabric(font);
-	
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("NewGame"),100, 
-				Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 - 400), 
-				ChangeColor, nothing)));
-
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("Setting"), 100,
-				Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 - 250),
-				ChangeColor, setMorph2)));
-
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("LevelEditor"), 100,
-				Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 - 100),
-				ChangeColor, setMorph3)));
-		
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("Exit"), 100,
-				Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 + 50),
-				ChangeColor, Exit)));
-	}
+	void createMenuMorph1(sf::RenderWindow &window);
 
 	void createMenuMorph2(sf::RenderWindow &window)
 	{
@@ -91,33 +51,30 @@ private:
 
 		ButtonFabric fabric(font);
 		
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("Back"), 50,
+		objects.push_back(fabric.createClickableButton(std::string("Back"), 50,
 				Vector2(window.getSize().x / 6, window.getSize().y / 6 * 5),
-				ChangeColor, setMorph1)));
+				ChangeColor, setMorph1));
 
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("Resolution"), 50,
+		objects.push_back(fabric.createClickableButton(std::string("Resolution"), 50,
 				Vector2(window.getSize().x / 6, window.getSize().y / 6),
-				nothing, nothing)));
+				nothing, nothing));
 
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("800x600"), 50,
+		objects.push_back(fabric.createClickableButton(std::string("800x600"), 50,
 				Vector2(window.getSize().x / 6 * 1, window.getSize().y / 4),
-				ChangeColor, SetResolution800x600)));
+				ChangeColor, SetResolution800x600));
 
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("1400x900"), 50,
+		objects.push_back(fabric.createClickableButton(std::string("1400x900"), 50,
 				Vector2(window.getSize().x / 6 * 2, window.getSize().y / 4),
-				ChangeColor, SetResolution1400x900)));
+				ChangeColor, SetResolution1400x900));
 
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("1920x1080"), 50,
+		objects.push_back(fabric.createClickableButton(std::string("1920x1080"), 50,
 				Vector2(window.getSize().x / 6 * 3, window.getSize().y / 4),
-				ChangeColor, SetResolution1920x1080)));
+				ChangeColor, SetResolution1920x1080));
 	}
 
+	template<typename nextScene>
 	void createMenuMorph3(sf::RenderWindow &window);
+
 	
 public:
 	MainMenu(sf::RenderWindow &window)
@@ -150,8 +107,54 @@ public:
 };
 
 #include "levelEditor.h"
+#include "gameScene.h"
 
-inline void MainMenu::createMenuMorph3(sf::RenderWindow& window)
+inline void MainMenu::createMenuMorph1(sf::RenderWindow& window)
+{
+	std::function<void(Object&)> nothing([](Object& object) {});
+	std::function<void(Object&)> ChangeColor([](Object& object) {object.ChangeColour(sf::Color::Red); });
+	std::function<void(Object&)> Exit([&window](Object& object) { EventOperator::instance()->push(Event::eventExit); });
+
+	std::function<void(Object&)> setMorph2([this](Object& object)
+	{
+		setCurrentMenuMorph =
+			std::function<void(sf::RenderWindow&)>([this](sf::RenderWindow& window) {createMenuMorph2(window); });
+	});
+
+	std::function<void(Object&)> setMorph3Editor([this](Object& object)
+	{
+		setCurrentMenuMorph =
+			std::function<void(sf::RenderWindow&)>([this](sf::RenderWindow& window) {createMenuMorph3<LevelEditor>(window); });
+	});
+
+	std::function<void(Object&)> setMorph3Game([this](Object& object)
+	{
+		setCurrentMenuMorph =
+			std::function<void(sf::RenderWindow&)>([this](sf::RenderWindow& window) {createMenuMorph3<GameScene>(window); });
+	});
+
+	ButtonFabric fabric(font);
+
+	objects.push_back(fabric.createClickableButton(std::string("NewGame"), 100,
+		Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 - 400),
+		ChangeColor, setMorph3Game));
+
+	objects.push_back(fabric.createClickableButton(std::string("Setting"), 100,
+		Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 - 250),
+		ChangeColor, setMorph2));
+
+	objects.push_back(fabric.createClickableButton(std::string("LevelEditor"), 100,
+		Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 - 100),
+		ChangeColor, setMorph3Editor));
+
+	objects.push_back(fabric.createClickableButton(std::string("Exit"), 100,
+		Vector2(window.getSize().x / 2 - 150, window.getSize().y / 2 + 50),
+		ChangeColor, Exit));
+}
+
+
+template <typename nextScene>
+void MainMenu::createMenuMorph3(sf::RenderWindow& window)
 {
 	std::function<void(Object&)> setMorph1([this](Object& object)
 	{
@@ -167,19 +170,18 @@ inline void MainMenu::createMenuMorph3(sf::RenderWindow& window)
 		std::function<void(Object&)> openEditor([&window, i](Object& object)
 		{
 			EventOperator::instance()->push(Event::changingScene);
-			EventOperator::instance()->sceneToSwap = std::make_shared<LevelEditor>(window, i);
+			nextScene* a = new nextScene(window, i);
+			EventOperator::instance()->putSceneToSwap(std::shared_ptr<Scene>(dynamic_cast<Scene*>(a)));
 		});
 
 
-		objects.push_back(std::shared_ptr<TextObject>
-			(fabric.createClickableButton(std::string("Level ") + std::to_string(i), 50,
-				Vector2(window.getSize().x / 6 * ((i % 4) + 1), window.getSize().y / 6 * ((static_cast<int>(i / 4) + 1))),
-				ChangeColor, openEditor)));
+		objects.push_back(fabric.createClickableButton(std::string("Level ") + std::to_string(i), 80,
+			Vector2(window.getSize().x / 6 * ((i % 4) + 1), window.getSize().y / 6 * ((static_cast<int>(i / 4) + 1))),
+			ChangeColor, openEditor));
 
 	}
 
-	objects.push_back(std::shared_ptr<TextObject>
-		(fabric.createClickableButton(std::string("Back"), 50,
-			Vector2(window.getSize().x / 6, window.getSize().y / 6 * 5),
-			ChangeColor, setMorph1)));
+	objects.push_back(fabric.createClickableButton(std::string("Back"), 80,
+		Vector2(window.getSize().x / 6, window.getSize().y / 6 * 5),
+		ChangeColor, setMorph1));
 }
