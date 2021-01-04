@@ -33,6 +33,11 @@ private:
 			EventOperator::instance()->putSceneToSwap(std::make_shared<MainMenu>(window));
 		});
 
+		std::function<void(Object&)> clearLevel([&window, this](Object& object)
+		{
+			level.getWalls().clear();
+		});
+
 		objects.push_back(fabric.createClickableButton(std::string("Level ") + std::to_string(levelNumber), 50,
 				Vector2(50, 50),
 				nothing, nothing));
@@ -41,6 +46,9 @@ private:
 				Vector2(window.getSize().x - 200, 50),
 				ChangeColor, backToMenu));
 
+		objects.push_back(fabric.createClickableButton(std::string("Clear"), 50,
+			Vector2(window.getSize().x - 200, 110),
+			ChangeColor, clearLevel));
 	}
 
 
@@ -84,10 +92,6 @@ private:
 		{
 			if (!differentClickLBM)
 			{
-				std::for_each(objects.begin(), objects.end(),
-					[&window, &mouse](std::shared_ptr<Object>& object) { object->onMousePressed(mouse); });
-
-
 				std::string tmp;
 				bool possibleToAdd = true;
 				if (currentType == wallType::wall)
@@ -111,6 +115,9 @@ private:
 
 				if (possibleToAdd)
 					level.addWall(tmp, mouse, camera.getCoordinate(), currentType);
+
+				std::for_each(objects.begin(), objects.end(),
+					[&window, &mouse](std::shared_ptr<Object>& object) { object->onMousePressed(mouse); });
 			}
 		}
 		else

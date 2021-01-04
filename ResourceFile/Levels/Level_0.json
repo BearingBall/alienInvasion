@@ -1,6 +1,12 @@
 {
     "level.floor.textureName": "../ResourceFile/ground.png",
-    "level.walls.size": 0,
+    "level.walls.size": 1,
+    "level.walls[0].coordinate.x": 1300.0,
+    "level.walls[0].coordinate.y": 0.0,
+    "level.walls[0].size": 100.0,
+    "level.walls[0].speed": 0.0,
+    "level.walls[0].type": 3,
+    "level.walls[0].wallName": "../ResourceFile/doorOut.png",
     "levelSize.x": 2000.0,
     "levelSize.y": 2000.0,
     "wallSize": 100.0
