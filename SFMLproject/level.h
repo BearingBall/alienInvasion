@@ -35,10 +35,10 @@ public:
 	Level(Vector2 _levelSize = { 2000,2000 }):levelSize(_levelSize),floor(ResourceFileNaming::groundName)
 	{
 		norming(levelSize);
-		floor.texture.setSmooth(true);
-		floor.texture.setRepeated(true);
-		floor.refreshSprite(sf::IntRect(0, 0, levelSize.x * floor.texture.getSize().x / wallSize, levelSize.y*floor.texture.getSize().y / wallSize));
-		floor.sprite.setScale(sf::Vector2f(wallSize/ floor.texture.getSize().x, wallSize / floor.texture.getSize().y));
+		floor.getTexture().setSmooth(true);
+		floor.getTexture().setRepeated(true);
+		floor.refreshSprite(sf::IntRect(0, 0, levelSize.x * floor.getTexture().getSize().x / wallSize, levelSize.y*floor.getTexture().getSize().y / wallSize));
+		floor.getSprite().setScale(sf::Vector2f(wallSize/ floor.getTexture().getSize().x, wallSize / floor.getTexture().getSize().y));
 	}
 	~Level() = default;
 	
@@ -50,7 +50,7 @@ public:
 		if ((place.x >= 0 && place.y >= 0) && (place.x < levelSize.x && place.y < levelSize.y)
 			&&(std::find(walls.begin(), walls.end(), wall) == walls.end()))
 		{
-			walls.push_back(wall);
+			walls.emplace_back(wallName, place, type, wallSize);
 		}
 	}
 

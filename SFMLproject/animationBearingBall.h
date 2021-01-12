@@ -11,7 +11,8 @@ public:
 	void running(sf::RenderWindow& window)
 	{
 		PictureObject man(ResourceFileNaming::soldierName);
-		man.sprite.setScale(5, 5);
+		man.getSprite().setScale(5, 5);
+		//man.getSprite().setPosition(330, 320);
 		sf::Font font;
 		font.loadFromFile(ResourceFileNaming::fontName);
 		std::string logo = "BearingBall";
@@ -28,7 +29,7 @@ public:
 		sf::Time time = clock.getElapsedTime();
 
 		
-		size_t loadingTime = 2000;
+		size_t loadingTime = 2000-1800;
 		while (time.asMilliseconds() < 2*loadingTime)
 		{
 			time = clock.getElapsedTime();

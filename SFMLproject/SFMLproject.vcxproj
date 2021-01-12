@@ -149,6 +149,9 @@
     <ClInclude Include="buttonFabric.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="classSaver.h" />
+    <ClInclude Include="creature.h" />
+    <ClInclude Include="creatureDrawer.h" />
+    <ClInclude Include="creatureLevelBoxing.h" />
     <ClInclude Include="damagable.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="engine.h" />
@@ -167,6 +170,7 @@
     <ClInclude Include="resourceFileNaming.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="textObject.h" />
+    <ClInclude Include="textureCollector.h" />
     <ClInclude Include="vector2.h" />
     <ClInclude Include="wall.h" />
   </ItemGroup>

@@ -114,7 +114,7 @@ private:
 				}
 
 				if (possibleToAdd)
-					level.addWall(tmp, mouse, camera.getCoordinate(), currentType);
+					level.addWall(tmp, mouse/camera.scrollScaling, camera.getCoordinate(), currentType);
 
 				std::for_each(objects.begin(), objects.end(),
 					[&window, &mouse](std::shared_ptr<Object>& object) { object->onMousePressed(mouse); });
@@ -195,6 +195,11 @@ public:
 	void render(sf::RenderWindow &window) override;
 	
 	~LevelEditor() = default;
+
+	void scroll(int value) override
+	{
+		camera.scrollScaling += value * 0.05;
+	}
 };
 
 #include "mainMenuScene.h"

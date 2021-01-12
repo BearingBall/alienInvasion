@@ -24,7 +24,7 @@ public:
 		saveFile["wallSize"] = level.getWallSize();
 		saveFile["levelSize.x"] = level.getLevelSize().x;
 		saveFile["levelSize.y"] = level.getLevelSize().y;
-		saveFile["level.floor.textureName"] = level.getFloor().textureName;
+		saveFile["level.floor.textureName"] = level.getFloor().getTextureName();
 		saveFile["level.walls.size"] = level.getWalls().size();
 		for (size_t i = 0; i < level.getWalls().size(); ++i)
 		{
@@ -47,7 +47,7 @@ public:
 		level.getWallSize() = saveFile["wallSize"];
 		level.getLevelSize().x = saveFile["levelSize.x"];
 		level.getLevelSize().y = saveFile["levelSize.y"];
-		level.getFloor().textureName = saveFile["level.floor.textureName"];
+		level.getFloor().getTextureName() = saveFile["level.floor.textureName"];
 		for (size_t i = 0; i < saveFile["level.walls.size"]; ++i)
 		{
 			Wall wall(saveFile[std::string("level.walls[") + std::to_string(i) + "].wallName"],

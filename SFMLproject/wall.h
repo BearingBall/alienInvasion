@@ -18,16 +18,16 @@ public:
 	std::string wallName;
 	wallType type;
 	PictureObject model;
-	Wall(std::string _wallName, Vector2 coord, wallType _type, float _size = 100):Movable(coord),model(wallName),size(_size),wallName(_wallName),type(_type)
+	Wall(std::string _wallName, Vector2 coord, wallType _type, float _size):Movable(coord),model(wallName),size(_size),wallName(_wallName),type(_type)
 	{
 		
 	}
 	
-	void draw(sf::RenderWindow& window, Vector2 shift, Vector2 levelSize)
+	void draw(sf::RenderWindow& window, Vector2 shift, Vector2 levelSize, float scroll)
 	{
-		model.refreshSprite(sf::IntRect(0, 0, model.texture.getSize().x, model.texture.getSize().y));
-		model.setPosition(coordinate+shift);
-		model.sprite.setScale(sf::Vector2f(size / model.texture.getSize().x, size / model.texture.getSize().y));
+		model.refreshSprite(sf::IntRect(0, 0, model.getTexture().getSize().x, model.getTexture().getSize().y));
+		model.setPosition((coordinate+shift)*scroll);
+		model.getSprite().setScale(sf::Vector2f(size / model.getTexture().getSize().x*scroll, size / model.getTexture().getSize().y*scroll));
 		model.draw(window);
 	}
 
@@ -35,5 +35,7 @@ public:
 	{
 		return coordinate == other.getCoordinate();
 	}
-	
+
 };
+
+

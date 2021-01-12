@@ -15,4 +15,5 @@ public:
 	inline static const std::string doorOutName = "../ResourceFile/doorOut.png";
 	inline static const std::string backgroundName = "../ResourceFile/background.png";
 	inline static const std::string soldierName = "../ResourceFile/soldier.png";
+	inline static const std::string heroName = "../ResourceFile/hero.png";
 };

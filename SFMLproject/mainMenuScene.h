@@ -22,8 +22,8 @@ private:
 	void initializeBackground(sf::RenderWindow &window)
 	{
 		PictureObject* background = new PictureObject(ResourceFileNaming::backgroundName);
-		background->texture.setSmooth(true);
-		background->texture.setRepeated(true);
+		background->getTexture().setSmooth(true);
+		background->getTexture().setRepeated(true);
 		background->refreshSprite(sf::IntRect(0, 0, window.getSize().x, window.getSize().x));
 		background->getSprite().setScale(5, 5);
 		objects.push_back(std::shared_ptr<PictureObject>(background));
@@ -103,6 +103,11 @@ public:
 			[&window](std::shared_ptr<Object>& object) { object->draw(window); });
 
 		objects.clear();
+	}
+
+	void scroll(int value) override
+	{
+
 	}
 };
 

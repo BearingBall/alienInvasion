@@ -27,6 +27,11 @@ private:
 				window.setView(sf::View(visibleArea));
 			}
 
+			if (event.type == sf::Event::MouseWheelScrolled)
+			{
+				activeScene->scroll(event.mouseWheelScroll.delta);
+			}
+
 		}
 	}
 

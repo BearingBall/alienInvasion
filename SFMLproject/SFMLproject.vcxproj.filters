@@ -47,6 +47,12 @@
     <Filter Include="Exceptions">
       <UniqueIdentifier>{d462aa4c-c56e-4342-8ded-966f0897f4c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Creature">
+      <UniqueIdentifier>{35108922-b22c-40fd-8f54-902a734d26d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextureCollector">
+      <UniqueIdentifier>{6999e0a9-95e1-45da-9541-2798cddb70ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -125,6 +131,18 @@
     </ClInclude>
     <ClInclude Include="gameScene.h">
       <Filter>Scenes\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="creature.h">
+      <Filter>Creature</Filter>
+    </ClInclude>
+    <ClInclude Include="creatureDrawer.h">
+      <Filter>Creature</Filter>
+    </ClInclude>
+    <ClInclude Include="textureCollector.h">
+      <Filter>TextureCollector</Filter>
+    </ClInclude>
+    <ClInclude Include="creatureLevelBoxing.h">
+      <Filter>Creature</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

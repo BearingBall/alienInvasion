@@ -2,27 +2,28 @@
 #include <SFML/Graphics.hpp>
 
 #include "object.h"
+#include "textureCollector.h"
 
 struct PictureObject final: Object
 {
+private:
 	std::string textureName;
-	sf::Texture texture;
+	std::shared_ptr<sf::Texture> texture;
 	sf::Sprite sprite;
 public:
-	PictureObject(const std::string& name):textureName(name)
+	PictureObject(const std::string& name):textureName(name),texture((*TextureCollector::instance())[name])
 	{
-		texture.loadFromFile(name);
 		refreshSprite();
 	}
-	
+
 	void refreshSprite()
 	{
-		sprite = sf::Sprite(texture);
+		sprite = sf::Sprite(*texture);
 	}
 
 	void refreshSprite(sf::IntRect rect)
 	{
-		sprite = sf::Sprite(texture, rect);
+		sprite = sf::Sprite(*texture, rect);
 	}
 
 	void setPosition(Vector2 point) override
@@ -53,12 +54,12 @@ public:
 
 	const sf::Texture& getTexture() const
 	{
-		return texture;
+		return *texture;
 	}
 
 	sf::Texture& getTexture()
 	{
-		return texture;
+		return *texture;
 	}
 
 	const sf::Sprite& getSprite() const
@@ -69,5 +70,15 @@ public:
 	sf::Sprite& getSprite()
 	{
 		return sprite;
+	}
+
+	const std::string& getTextureName() const
+	{
+		return textureName;
+	}
+
+	std::string& getTextureName()
+	{
+		return textureName;
 	}
 };

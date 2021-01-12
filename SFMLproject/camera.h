@@ -7,4 +7,6 @@ class Camera final:public Movable
 public:
 	Camera():Movable({0,0}) { }
 	~Camera() = default;
+
+	float scrollScaling = 1;
 };

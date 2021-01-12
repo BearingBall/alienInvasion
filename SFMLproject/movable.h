@@ -1,6 +1,7 @@
 #pragma once
 #include "vector2.h"
 
+
 class Movable
 {
 protected:
@@ -14,7 +15,7 @@ public:
 	{
 		
 	}
-
+	
 	void stepLeft(float stepSize)
 	{
 		coordinate.x -= speed*stepSize;

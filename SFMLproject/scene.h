@@ -12,4 +12,5 @@ public:
 	virtual ~Scene() = default;
 	
 	virtual void render(sf::RenderWindow &window) = NULL;
+	virtual void scroll(int value) = NULL;
 };
