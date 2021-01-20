@@ -1,4 +1,6 @@
 #pragma once
+#include <corecrt_math_defines.h>
+
 #include "damagable.h"
 #include "movable.h"
 #include "level.h"
@@ -30,10 +32,6 @@ public:
 	}
 	virtual ~Creature() = default;
 	
-	//virtual void playCurrentAnimation();
-
-	//virtual void move(Direction direction, Level& level);
-
 	const PictureObject& getModel() const
 	{
 		return model;
@@ -57,5 +55,23 @@ public:
 	const float& getRotation() const
 	{
 		return Rotation;
+	}
+
+	void rotation(Camera& camera, Vector2 pointToRotate)
+	{
+		const Vector2 playerMouseCoordinate = pointToRotate - (getCoordinate() + modelBound() / 2 - camera.getCoordinate())*camera.scrollScaling;
+		rotation(playerMouseCoordinate);
+	}
+
+	void rotation(Vector2 pointToRotate)
+	{
+		if (pointToRotate.y > 0)
+		{
+			getRotation() = acos(pointToRotate.x / pointToRotate.length()) * 180 / M_PI + 90;
+		}
+		else
+		{
+			getRotation() = 360 - acos(pointToRotate.x / pointToRotate.length()) * 180 / M_PI + 90;
+		}
 	}
 };

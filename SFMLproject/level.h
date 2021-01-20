@@ -53,7 +53,7 @@ public:
 			walls.emplace_back(wallName, place, type, wallSize);
 		}
 	}
-
+	
 	const float& getWallSize() const
 	{
 		return wallSize;

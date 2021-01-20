@@ -41,7 +41,12 @@ public:
 		}
 	}
 
-	bool alive()
+	float percentageHealth() const
+	{
+		return static_cast<float>(health) / maxHealth;
+	}
+	
+	bool alive() const
 	{
 		return health != 0;
 	}

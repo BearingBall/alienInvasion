@@ -53,6 +53,15 @@
     <Filter Include="TextureCollector">
       <UniqueIdentifier>{6999e0a9-95e1-45da-9541-2798cddb70ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Animator">
+      <UniqueIdentifier>{7a4dd864-e1c3-42df-9de9-f15fb9bc32cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{72932ea9-2f7a-4eab-ad07-c5e6ea0c693d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemy">
+      <UniqueIdentifier>{f15a4d08-2658-43ba-b0a6-391eba621c29}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -85,9 +94,6 @@
       <Filter>Level</Filter>
     </ClInclude>
     <ClInclude Include="wall.h">
-      <Filter>Level</Filter>
-    </ClInclude>
-    <ClInclude Include="enemy.h">
       <Filter>Level</Filter>
     </ClInclude>
     <ClInclude Include="levelDrawer.h">
@@ -143,6 +149,21 @@
     </ClInclude>
     <ClInclude Include="creatureLevelBoxing.h">
       <Filter>Creature</Filter>
+    </ClInclude>
+    <ClInclude Include="animator.h">
+      <Filter>Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyMover.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelBitmap.h">
+      <Filter>Level</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
