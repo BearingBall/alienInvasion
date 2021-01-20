@@ -50,6 +50,7 @@ public:
 					else
 					{
 						bitmap.enemyMove(enemy);
+						enemy.animationMoving();
 					}
 			});
 		}

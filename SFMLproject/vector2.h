@@ -4,7 +4,7 @@
 class Vector2 final
 {
 private:
-	float maxSpeed = 200;
+	float maxSpeed = 400;
 public:
 	Vector2(float _x, float _y) : x(_x), y(_y)
 	{

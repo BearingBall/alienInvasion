@@ -16,7 +16,7 @@ private:
 	Timer timerHitting;
 	float hitRange = 60;
 public:
-	Enemy(Vector2 coord, size_t maxHealth):Creature(ResourceFileNaming::alian0Name, coord,  maxHealth), timerAnimation(0.1), animator(ResourceFileNaming::alian0Name), timerHitting(3)
+	Enemy(Vector2 coord, size_t maxHealth):Creature(ResourceFileNaming::alian0Name, coord,  maxHealth), timerAnimation(0.2), animator(ResourceFileNaming::alian0Name), timerHitting(3)
 	{
 		animator.addState(ResourceFileNaming::alian1Name);
 		animator.addState(ResourceFileNaming::alian2Name);
