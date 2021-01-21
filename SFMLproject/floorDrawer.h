@@ -9,8 +9,8 @@ private:
 public:
 	static void draw(sf::RenderWindow& window, PictureObject& floor, Camera& camera, float wallSize)
 	{
-		floor.setPosition((startFloorPosition - camera.getCoordinate())*camera.scrollScaling);
-		floor.getSprite().setScale( wallSize / floor.getTexture().getSize().x*camera.scrollScaling, wallSize / floor.getTexture().getSize().y*camera.scrollScaling);
+		floor.setPosition((startFloorPosition - camera.getCoordinate())*camera.getScrollScaling());
+		floor.getSprite().setScale( wallSize / floor.getTexture().getSize().x*camera.getScrollScaling(), wallSize / floor.getTexture().getSize().y*camera.getScrollScaling());
 		floor.draw(window);
 	}
 };

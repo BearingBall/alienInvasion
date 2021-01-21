@@ -7,22 +7,7 @@ class EnemyMover final
 private:
 	static void stupidMovement(Enemy& enemy, Creature& player)
 	{
-		if (enemy.getCoordinate().y < player.getCoordinate().y)
-		{
-			enemy.stepDown(1);
-		}
-		if (enemy.getCoordinate().y > player.getCoordinate().y)
-		{
-			enemy.stepUp(1);
-		}
-		if (enemy.getCoordinate().x < player.getCoordinate().x)
-		{
-			enemy.stepRigth(1);
-		}
-		if (enemy.getCoordinate().x > player.getCoordinate().x)
-		{
-			enemy.stepLeft(1);
-		}
+		enemy.step((player.getCoordinate() - enemy.getCoordinate()).moduleNormingImage());
 	}
 
 public:

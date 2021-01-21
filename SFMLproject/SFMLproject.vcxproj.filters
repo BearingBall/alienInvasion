@@ -165,5 +165,8 @@
     <ClInclude Include="LevelBitmap.h">
       <Filter>Level</Filter>
     </ClInclude>
+    <ClInclude Include="VectorInt.h">
+      <Filter>Math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

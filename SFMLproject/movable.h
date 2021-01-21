@@ -7,7 +7,7 @@ class Movable
 protected:
 	Vector2 coordinate = {0,0};
 	float speed = 0;
-	
+	float maxSpeed = 0;
 private:
 	
 public:
@@ -15,7 +15,12 @@ public:
 	{
 		
 	}
-	
+
+	void step(Vector2 direction)
+	{
+		coordinate += direction* speed;
+	}
+
 	void stepLeft(float stepSize)
 	{
 		coordinate.x -= speed*stepSize;
@@ -32,7 +37,7 @@ public:
 	{
 		coordinate.y += speed*stepSize;
 	}
-	
+
 	virtual ~Movable() = default;
 
 	const Vector2& getCoordinate() const

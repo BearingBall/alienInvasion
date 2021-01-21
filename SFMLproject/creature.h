@@ -5,21 +5,6 @@
 #include "movable.h"
 #include "level.h"
 
-enum CreatureStrategy
-{
-	walking,
-	attacking,
-	staying
-};
-
-enum Direction
-{
-	up,
-	down,
-	left,
-	right
-};
-
 class Creature: public Movable, public Damagable
 {
 private:
@@ -59,7 +44,7 @@ public:
 
 	void rotation(Camera& camera, Vector2 pointToRotate)
 	{
-		const Vector2 playerMouseCoordinate = pointToRotate - (getCoordinate() + modelBound() / 2 - camera.getCoordinate())*camera.scrollScaling;
+		const Vector2 playerMouseCoordinate = pointToRotate - (getCoordinate() + modelBound() / 2 - camera.getCoordinate())*camera.getScrollScaling();
 		rotation(playerMouseCoordinate);
 	}
 

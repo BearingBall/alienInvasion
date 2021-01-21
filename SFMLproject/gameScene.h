@@ -23,7 +23,6 @@ private:
 	size_t enemiesMaxCount = 5;
 	Timer enemySpawnTimer;
 	size_t wallSize = 100;
-	float cameraSpeed = 0.001;
 
 	void buttonOperator(sf::RenderWindow& window, Vector2 mouse)
 	{
@@ -89,19 +88,6 @@ private:
 		}
 	}
 
-	void cameraMover(sf::RenderWindow &window)
-	{
-		if ((camera.getCoordinate() - (player.getCoordinate() - Vector2(window.getSize().x, window.getSize().y) / 2 / camera.scrollScaling)).length() > 50)
-		{
-			camera.getCoordinate() += 
-				(player.getCoordinate() - Vector2(window.getSize().x, window.getSize().y) / 2 / camera.scrollScaling - camera.getCoordinate()).exping(50,3)*cameraSpeed;
-		}
-		else
-		{
-			camera.getCoordinate() += (player.getCoordinate() - Vector2(window.getSize().x, window.getSize().y) / 2 / camera.scrollScaling - camera.getCoordinate())*cameraSpeed;
-		}
-	}
-
 	void playerAnimatorSetUp()
 	{
 		playerAnimator.addState(ResourceFileNaming::hero1Name);
@@ -145,8 +131,7 @@ public:
 		ClassSaver<Level>::download(levelNumber, level);
 		bitmap.load(level);
 		wallSize = level.getWallSize();
-		camera.getSpeed() = 1;
-		camera.scrollScaling = 3;
+		camera.getScrollScaling() = 3;
 		player.getSpeed() = 0.2;
 		const std::vector<Wall>::iterator doorIn = std::find_if(level.getWalls().begin(), level.getWalls().end(), [](const Wall& wall) { return wall.type == wallType::doorIn; });
 		if (doorIn != level.getWalls().end())
@@ -165,7 +150,7 @@ public:
 		Vector2 mouse(sf::Mouse::getPosition().x - window.getPosition().x, sf::Mouse::getPosition().y - window.getPosition().y - windowBorderSize);
 		buttonOperator(window,mouse);
 		isLevelEnded(window);
-		cameraMover(window);
+		camera.cameraMover(window, player.getCoordinate());
 		player.rotation(camera, mouse);
 		LevelDrawer::draw(window, level, camera);
 		CreatureDrawer::draw(window, player, camera, wallSize/2);

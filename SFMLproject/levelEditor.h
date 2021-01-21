@@ -114,7 +114,7 @@ private:
 				}
 
 				if (possibleToAdd)
-					level.addWall(tmp, mouse/camera.scrollScaling, camera.getCoordinate(), currentType);
+					level.addWall(tmp, mouse/camera.getScrollScaling(), camera.getCoordinate(), currentType);
 
 				std::for_each(objects.begin(), objects.end(),
 					[&window, &mouse](std::shared_ptr<Object>& object) { object->onMousePressed(mouse); });
@@ -198,7 +198,7 @@ public:
 
 	void scroll(int value) override
 	{
-		camera.scrollScaling += value * 0.05;
+		camera.getScrollScaling() += value * 0.05;
 	}
 };
 

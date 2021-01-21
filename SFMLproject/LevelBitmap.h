@@ -3,17 +3,7 @@
 #include "enemy.h"
 #include <array>
 #include <iostream>
-
-struct VectorInt final
-{
-	size_t x;
-	size_t y;
-
-	bool operator==(const VectorInt& other) const 
-	{
-		return (x == other.x) && (y == other.y);
-	}
-};
+#include "vectorInt.h"
 
 class Bitmap final
 {
@@ -116,11 +106,11 @@ public:
 	{
 		if (indexX >= x)
 		{
-			return map[x + y];
+			return map[x * y];
 		}
 		if (indexY >= y)
 		{
-			return map[x + y];
+			return map[x * y];
 		}
 		
 		return map[indexX + indexY * x];

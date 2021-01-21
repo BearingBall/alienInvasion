@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include "pictureObject.h"
-#include "textureCollector.h"
 
 class Animator final
 {
@@ -29,6 +28,4 @@ public:
 		currentState = currentState + 1 < states.size()  ? currentState + 1 : 0;
 		object.getTexture().loadFromFile(states[currentState]);
 	}
-	
-	
 };
