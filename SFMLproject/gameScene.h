@@ -7,6 +7,8 @@
 #include "timer.h"
 #include "enemy.h"
 #include "enemyMover.h"
+#include "gun.h"
+#include "bulletEnemyHitter.h"
 
 
 class GameScene final:public Scene
@@ -17,6 +19,7 @@ private:
 	Bitmap bitmap;
 	Camera camera;
 	Creature player;
+	Gun gun;
 	Timer playerTimer;
 	Animator playerAnimator;
 	std::vector<Enemy> enemies;
@@ -75,6 +78,11 @@ private:
 		{
 			playerAnimator.setDefault(player.getModel());
 		}
+
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		{
+			gun.shoot();
+		}
 	}
 
 	void isLevelEnded(sf::RenderWindow &window)
@@ -108,8 +116,8 @@ private:
 			{
 				if (wall.type == wallType::spawnPoint)
 				{
-					enemies.emplace_back(wall.getCoordinate(), 5);
-					enemies.back().getSpeed() = 0.3;
+					enemies.emplace_back(wall.getCoordinate(), 20);
+					enemies.back().getSpeed() = 1.2;
 				}
 			});
 		}
@@ -123,16 +131,24 @@ private:
 			CreatureDrawer::draw(window, enemy, camera, wallSize / 2);
 		});
 	}
+
+	void enemyRemover()
+	{
+		enemies.erase(std::remove_if(enemies.begin(), enemies.end(), [](Enemy& enemy)
+		{
+			return !enemy.alive();
+		}), enemies.end());
+	}
 	
 public:
-	GameScene(sf::RenderWindow &window, size_t _levelNumber) :levelNumber(_levelNumber), level({ 2000,2000 }), player(ResourceFileNaming::hero0Name), playerAnimator(ResourceFileNaming::hero0Name),enemySpawnTimer(3), bitmap(level)
+	GameScene(sf::RenderWindow &window, size_t _levelNumber) :levelNumber(_levelNumber), level({ 2000,2000 }), player(ResourceFileNaming::hero0Name), playerAnimator(ResourceFileNaming::hero0Name),enemySpawnTimer(10), bitmap(level), gun(player)
 	{
 		playerAnimatorSetUp();
 		ClassSaver<Level>::download(levelNumber, level);
 		bitmap.load(level);
 		wallSize = level.getWallSize();
-		camera.getScrollScaling() = 3;
-		player.getSpeed() = 0.2;
+		camera.getScrollScaling() = 2;
+		player.getSpeed() = 1;
 		const std::vector<Wall>::iterator doorIn = std::find_if(level.getWalls().begin(), level.getWalls().end(), [](const Wall& wall) { return wall.type == wallType::doorIn; });
 		if (doorIn != level.getWalls().end())
 		{
@@ -157,6 +173,9 @@ public:
 		enemySpawning();
 		EnemyMover::move(enemies, player, level, bitmap);
 		enemyDrawer(window);
+		enemyRemover();
+		BulletEnemyHitter::operate(gun, enemies);
+		gun.render(window, level, camera);
 	};
 
 	void scroll(int value) override

@@ -50,7 +50,7 @@ private:
 public:
 	Camera():Movable({0,0})
 	{
-		speed = 0.001;
+		speed = 0.005;
 		maxSpeed = 400;
 	}
 	~Camera() = default;

@@ -63,13 +63,17 @@ public:
 	{
 		AnimationBearingBall animation;
 		animation.running(window);
+		Timer framerate(0.01);
 		while (window.isOpen())
 		{
 			checkSfEvents();
 			checkCustomEvents();
-			window.clear();
-			activeScene->render(window);
-			window.display();
+			if (framerate.isTimerOut())
+			{
+				window.clear();
+				activeScene->render(window);
+				window.display();
+			}
 		}
 	}
 };

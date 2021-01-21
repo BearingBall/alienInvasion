@@ -23,4 +23,5 @@ public:
 	inline static const std::string alian0Name = "../ResourceFile/alian0.png";
 	inline static const std::string alian1Name = "../ResourceFile/alian1.png";
 	inline static const std::string alian2Name = "../ResourceFile/alian2.png";
+	inline static const std::string bulletName = "../ResourceFile/bullet.png";
 };
