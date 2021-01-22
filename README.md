@@ -12,6 +12,7 @@ Exit - go out.
 
 2. Level Editor
 You can place some objects (wall, doorIn, doorOut, spawnPoint) using left mouse button.
+RBM - to destroy object.
 W,A,S,D - to move camera.
 Q - to  change active object (that would be placed after mouse clicking)
 Mouse scrolling - to looping scale map.
