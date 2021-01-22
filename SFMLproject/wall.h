@@ -18,7 +18,7 @@ public:
 	std::string wallName;
 	wallType type;
 	PictureObject model;
-	Wall(std::string _wallName, Vector2 coord, wallType _type, float _size):Movable(coord),model(wallName),size(_size),wallName(_wallName),type(_type)
+	Wall(const std::string& _wallName, Vector2 coord, wallType _type, float _size):Movable(coord),model(wallName),size(_size),wallName(_wallName),type(_type)
 	{
 		
 	}

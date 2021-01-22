@@ -20,22 +20,8 @@ Vector2 Camera::exping(Vector2 velocity) const
 	{
 		velocity.y = -1 * (exp((-1 * velocity.y - expingArea) / expingStrongParam) + expingArea);
 	}
-	if (velocity.x > maxSpeed)
-	{
-		velocity.x = maxSpeed;
-	}
-	if (velocity.y > maxSpeed)
-	{
-		velocity.y = maxSpeed;
-	}
-	if (velocity.x < -maxSpeed)
-	{
-		velocity.x = -maxSpeed;
-	}
-	if (velocity.y < -maxSpeed)
-	{
-		velocity.y = -maxSpeed;
-	}
+	velocity.x = std::clamp(velocity.x, -maxSpeed, maxSpeed);
+	velocity.y = std::clamp(velocity.y, -maxSpeed, maxSpeed);
 	return velocity;
 }
 

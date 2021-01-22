@@ -7,15 +7,18 @@
 class AnimationBearingBall
 {
 private:
+	size_t loadingTime = 2000;
+	PictureObject man;
+	sf::Font font;
+	std::string logo = "BearingBall";
+	
 public:
+	AnimationBearingBall() : man(ResourceFileNaming::soldierName) {};
+	
 	void running(sf::RenderWindow& window)
 	{
-		PictureObject man(ResourceFileNaming::soldierName);
 		man.getSprite().setScale(5, 5);
-		//man.getSprite().setPosition(330, 320);
-		sf::Font font;
 		font.loadFromFile(ResourceFileNaming::fontName);
-		std::string logo = "BearingBall";
 		TextObject text(font, logo, 200);
 		text.getText().setStyle(sf::Text::Bold);
 		text.ChangeColour(sf::Color::Black);
@@ -28,8 +31,7 @@ public:
 		sf::Clock clock;
 		sf::Time time = clock.getElapsedTime();
 
-		
-		size_t loadingTime = 2000-1800;
+	
 		while (time.asMilliseconds() < 2*loadingTime)
 		{
 			time = clock.getElapsedTime();

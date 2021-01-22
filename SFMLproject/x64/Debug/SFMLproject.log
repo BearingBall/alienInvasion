@@ -1,4 +1,35 @@
-﻿  engine.cpp
+﻿  animator.cpp
+  buttonFabric.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\textobject.h(10): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+  camera.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.cpp(30): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.cpp(33): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.cpp(37): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+  classSaver.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(56): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(11): warning C4305: инициализация: усечение из "double" в "const float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(29): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+  damagable.cpp
+  engine.cpp
 c:\users\степан\source\repos\sfmlproject\sfmlproject\textobject.h(10): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
 c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
 c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(56): warning C4244: =: преобразование "double" в "float", возможна потеря данных
@@ -119,6 +150,48 @@ c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(215):
           [
               T=unsigned int
           ]
+  level.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(56): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(11): warning C4305: инициализация: усечение из "double" в "const float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(29): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+  levelBitmap.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(56): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(11): warning C4305: инициализация: усечение из "double" в "const float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(29): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(26): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(27): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(29): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(30): warning C4267: =: преобразование из "size_t" в "_Ty"; возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.cpp(62): warning C4244: аргумент: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.cpp(62): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.cpp(119): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.cpp(135): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+  levelDrawer.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(56): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(11): warning C4305: инициализация: усечение из "double" в "const float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(29): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
   main.cpp
 c:\users\степан\source\repos\sfmlproject\sfmlproject\textobject.h(10): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
 c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
@@ -234,6 +307,17 @@ c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(215):
           [
               T=unsigned int
           ]
+  movable.cpp
+  object.cpp
+  objectCollider.cpp
+  pictureObject.cpp
+  textObject.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\textobject.h(10): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+  textureCollector.cpp
+  timer.cpp
+  vector2.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\vector2.cpp(61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  wall.cpp
   Создание кода...
 c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(107): warning C4715: LevelEditor::tokenToString: значение возвращается не при всех путях выполнения
   SFMLproject.vcxproj -> C:\Users\Степан\source\repos\SFMLproject\x64\Debug\SFMLproject.exe
