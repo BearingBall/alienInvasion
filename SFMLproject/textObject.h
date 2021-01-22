@@ -14,39 +14,14 @@ public:
 		text.setStyle(sf::Text::Bold | sf::Text::Underlined);
 	}
 
-	void draw(sf::RenderWindow &window) override
-	{
-		window.draw(text);
-	}
-
-	void setPosition(Vector2 point) override
-	{
-		text.setPosition(point.x, point.y);
-	}
+	void draw(sf::RenderWindow& window) override;
+	void setPosition(Vector2 point) override;
 	
-	bool ifOnMousePressed(Vector2 point) override
-	{
-		return onMouseOver(point);
-	}
-
-	bool ifOnMouseOver(Vector2 point) const override
-	{
-		return (point.x > text.getGlobalBounds().left) && (point.x < (text.getGlobalBounds().left + text.getGlobalBounds().width)) &&
-			(point.y > text.getGlobalBounds().top) && (point.y < (text.getGlobalBounds().top + text.getGlobalBounds().height));
-	}
-
-	void ChangeColour(sf::Color color) override
-	{
-		text.setFillColor(color);
-	}
-
-	const sf::Text& getText() const
-	{
-		return text;
-	}
-
-	sf::Text& getText()
-	{
-		return text;
-	}
+	bool ifOnMousePressed(Vector2 point) override;
+	bool ifOnMouseOver(Vector2 point) const override;
+	
+	void ChangeColour(sf::Color color) override;
+	
+	const sf::Text& getText() const;
+	sf::Text& getText();
 };

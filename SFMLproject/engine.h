@@ -14,43 +14,9 @@ private:
 	sf::RenderWindow window;
 	sf::Event event;
 
-	void checkSfEvents()
-	{
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				window.close();
+	void checkSfEvents();
+	void checkCustomEvents();
 
-			if (event.type == sf::Event::Resized)
-			{
-				sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
-				window.setView(sf::View(visibleArea));
-			}
-
-			if (event.type == sf::Event::MouseWheelScrolled)
-			{
-				activeScene->scroll(event.mouseWheelScroll.delta);
-			}
-
-		}
-	}
-
-	void checkCustomEvents()
-	{
-		while (!EventOperator::instance()->empty())
-		{
-			Event event = EventOperator::instance()->pop();
-			if (event == Event::eventExit)
-				window.close();
-
-			if (event == Event::changingScene)
-			{
-				activeScene = EventOperator::instance()->getSceneToSwap();
-			}
-		}
-	}
-
-	
 public:
 	Engine(): window(sf::VideoMode(1500, 900), ResourceFileNaming::windowName)
 	{
@@ -58,22 +24,6 @@ public:
 		activeScene = std::make_shared<MainMenu>(window);
 	}
 	~Engine() = default;
-	
-	void running()
-	{
-		AnimationBearingBall animation;
-		animation.running(window);
-		Timer framerate(0.01);
-		while (window.isOpen())
-		{
-			checkSfEvents();
-			checkCustomEvents();
-			if (framerate.isTimerOut())
-			{
-				window.clear();
-				activeScene->render(window);
-				window.display();
-			}
-		}
-	}
+
+	void running();
 };

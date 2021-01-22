@@ -142,7 +142,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="animator.cpp" />
+    <ClCompile Include="buttonFabric.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="classSaver.cpp" />
+    <ClCompile Include="damagable.cpp" />
+    <ClCompile Include="engine.cpp" />
+    <ClCompile Include="level.cpp" />
+    <ClCompile Include="levelBitmap.cpp" />
+    <ClCompile Include="levelDrawer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="movable.cpp" />
+    <ClCompile Include="object.cpp" />
+    <ClCompile Include="objectCollider.cpp" />
+    <ClCompile Include="pictureObject.cpp" />
+    <ClCompile Include="textObject.cpp" />
+    <ClCompile Include="textureCollector.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="vector2.cpp" />
+    <ClCompile Include="wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animationBearingBall.h" />
@@ -161,13 +179,12 @@
     <ClInclude Include="engine.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="floorDrawer.h" />
-    <ClInclude Include="GameExceptions.h" />
     <ClInclude Include="gameScene.h" />
     <ClInclude Include="bullet.h" />
     <ClInclude Include="gun.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="level.h" />
-    <ClInclude Include="LevelBitmap.h" />
+    <ClInclude Include="levelBitmap.h" />
     <ClInclude Include="levelDrawer.h" />
     <ClInclude Include="levelEditor.h" />
     <ClInclude Include="mainMenuScene.h" />

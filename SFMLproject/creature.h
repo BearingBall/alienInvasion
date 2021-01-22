@@ -4,6 +4,7 @@
 #include "damagable.h"
 #include "movable.h"
 #include "level.h"
+#include "camera.h"
 
 class Creature: public Movable, public Damagable
 {

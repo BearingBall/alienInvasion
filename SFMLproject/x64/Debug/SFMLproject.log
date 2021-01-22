@@ -1,102 +1,75 @@
-﻿  main.cpp
-c:\users\степан\source\repos\sfmlproject\sfmlproject\vector2.h(68): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+﻿  engine.cpp
 c:\users\степан\source\repos\sfmlproject\sfmlproject\textobject.h(10): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(55): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(59): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(63): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(67): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(71): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(92): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(92): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(53): warning C4305: =: усечение из "double" в "float"
-c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(65): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(68): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(72): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
-          with
-          [
-              T=unsigned int
-          ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(55): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(59): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(56): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
 c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(11): warning C4305: инициализация: усечение из "double" в "const float"
-c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(40): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(29): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
           with
           [
               T=int
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(46): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(47): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(81): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(50): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(85): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(201): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(210): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(210): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(229): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(229): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
               T=int
           ]
 c:\users\степан\source\repos\sfmlproject\sfmlproject\creaturelevelboxing.h(32): warning C4305: =: усечение из "double" в "float"
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(74): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(75): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(77): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(78): warning C4267: =: преобразование из "size_t" в "_Ty"; возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(26): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(27): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(29): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(30): warning C4267: =: преобразование из "size_t" в "_Ty"; возможна потеря данных
           with
           [
               _Ty=int
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(88): warning C4244: аргумент: преобразование "float" в "size_t", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(88): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(156): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(170): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gun.h(14): warning C4305: инициализация: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gun.h(47): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
 c:\users\степан\source\repos\sfmlproject\sfmlproject\bulletenemyhitter.h(18): warning C4244: аргумент: преобразование "float" в "size_t", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(120): warning C4305: =: усечение из "double" в "float"
-c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(131): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(149): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(166): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(166): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(44): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(157): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(168): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(183): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(182): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
               T=int
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(172): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(189): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(202): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(206): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(98): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(102): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(106): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(110): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
 c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(144): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
@@ -117,23 +90,150 @@ c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(156):
           [
               T=unsigned int
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\engine.h(26): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(160): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(169): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(168): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\engine.cpp(12): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
           with
           [
               T=float
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\engine.h(32): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(184): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\engine.cpp(18): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(209): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-  c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(132): note: выполняется компиляция ссылки на экземпляр шаблон функции "void MainMenu::createMenuMorph3<LevelEditor>(sf::RenderWindow &)"
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(184): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
-c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(190): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+  c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(86): note: выполняется компиляция ссылки на экземпляр шаблон функции "void MainMenu::createMenuMorph3<LevelEditor>(sf::RenderWindow &)"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(209): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(215): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
               T=unsigned int
           ]
-c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(73): warning C4715: LevelEditor::tokenToString: значение возвращается не при всех путях выполнения
+  main.cpp
+c:\users\степан\source\repos\sfmlproject\sfmlproject\textobject.h(10): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\camera.h(18): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(56): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creature.h(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(11): warning C4305: инициализация: усечение из "double" в "const float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\level.h(29): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(47): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(81): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(85): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(229): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(229): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\creaturelevelboxing.h(32): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(26): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(27): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(29): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\levelbitmap.h(30): warning C4267: =: преобразование из "size_t" в "_Ty"; возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gun.h(14): warning C4305: инициализация: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gun.h(47): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\bulletenemyhitter.h(18): warning C4244: аргумент: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(44): warning C4244: =: преобразование "float" в "size_t", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(157): warning C4305: =: усечение из "double" в "float"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(168): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(183): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(182): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(189): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(202): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\gamescene.h(206): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(98): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(102): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(106): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(110): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(144): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(148): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(152): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(156): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(160): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(169): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(168): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(209): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+  c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(86): note: выполняется компиляция ссылки на экземпляр шаблон функции "void MainMenu::createMenuMorph3<LevelEditor>(sf::RenderWindow &)"
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(209): warning C4244: аргумент: преобразование "size_t" в "float", возможна потеря данных
+c:\users\степан\source\repos\sfmlproject\sfmlproject\mainmenuscene.h(215): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=unsigned int
+          ]
+  Создание кода...
+c:\users\степан\source\repos\sfmlproject\sfmlproject\leveleditor.h(107): warning C4715: LevelEditor::tokenToString: значение возвращается не при всех путях выполнения
   SFMLproject.vcxproj -> C:\Users\Степан\source\repos\SFMLproject\x64\Debug\SFMLproject.exe

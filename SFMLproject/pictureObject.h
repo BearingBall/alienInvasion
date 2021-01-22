@@ -16,69 +16,23 @@ public:
 		refreshSprite();
 	}
 
-	void refreshSprite()
-	{
-		sprite = sf::Sprite(*texture);
-	}
-
-	void refreshSprite(sf::IntRect rect)
-	{
-		sprite = sf::Sprite(*texture, rect);
-	}
-
-	void setPosition(Vector2 point) override
-	{
-		sprite.setPosition(point.x, point.y);
-	}
+	void refreshSprite();
+	void refreshSprite(sf::IntRect rect);
 	
-	void draw(sf::RenderWindow &window) override
-	{
-		window.draw(sprite);
-	}
-
-	bool ifOnMousePressed(Vector2 point) override
-	{
-		return onMouseOver(point);
-	}
-
-	bool ifOnMouseOver(Vector2 point) const override
-	{
-		return (point.x > sprite.getPosition().x) && (point.x < (sprite.getPosition().x + sprite.getGlobalBounds().width)) &&
-			(point.y > sprite.getPosition().y) && (point.y < (sprite.getPosition().y + sprite.getGlobalBounds().height));
-	}
-
-	void ChangeColour(sf::Color color) override
-	{
-		sprite.setColor(color);
-	}
-
-	const sf::Texture& getTexture() const
-	{
-		return *texture;
-	}
-
-	sf::Texture& getTexture()
-	{
-		return *texture;
-	}
-
-	const sf::Sprite& getSprite() const
-	{
-		return sprite;
-	}
-
-	sf::Sprite& getSprite()
-	{
-		return sprite;
-	}
-
-	const std::string& getTextureName() const
-	{
-		return textureName;
-	}
-
-	std::string& getTextureName()
-	{
-		return textureName;
-	}
+	void setPosition(Vector2 point) override;
+	void draw(sf::RenderWindow& window) override;
+	
+	bool ifOnMousePressed(Vector2 point) override;
+	bool ifOnMouseOver(Vector2 point) const override;
+	
+	void ChangeColour(sf::Color color) override;
+	
+	const sf::Texture& getTexture() const;
+	sf::Texture& getTexture();
+	
+	const sf::Sprite& getSprite() const;
+	sf::Sprite& getSprite();
+	
+	const std::string& getTextureName() const;
+	std::string& getTextureName();
 };

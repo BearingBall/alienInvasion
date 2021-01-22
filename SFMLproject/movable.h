@@ -16,47 +16,17 @@ public:
 		
 	}
 
-	void step(Vector2 direction)
-	{
-		coordinate += direction* speed;
-	}
-
-	void stepLeft(float stepSize)
-	{
-		coordinate.x -= speed*stepSize;
-	}
-	void stepRigth(float stepSize)
-	{
-		coordinate.x += speed*stepSize;
-	}
-	void stepUp(float stepSize)
-	{
-		coordinate.y -= speed*stepSize;
-	}
-	void stepDown(float stepSize)
-	{
-		coordinate.y += speed*stepSize;
-	}
-
+	void step(Vector2 direction);
+	void stepLeft(float stepSize);
+	void stepRigth(float stepSize);
+	void stepUp(float stepSize);
+	void stepDown(float stepSize);
+	
 	virtual ~Movable() = default;
-
-	const Vector2& getCoordinate() const
-	{
-		return coordinate;
-	}
-
-	Vector2& getCoordinate()
-	{
-		return coordinate;
-	}
-
-	const float& getSpeed() const
-	{
-		return speed;
-	}
-
-	float& getSpeed()
-	{
-		return speed;
-	}
+	
+	const Vector2& getCoordinate() const;
+	Vector2& getCoordinate();
+	
+	const float& getSpeed() const;
+	float& getSpeed();
 };

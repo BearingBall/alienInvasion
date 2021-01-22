@@ -4,6 +4,7 @@
 #include "movable.h"
 #include "damagable.h"
 #include "timer.h"
+#include "resourceFileNaming.h"
 
 
 class Enemy final: public Creature
